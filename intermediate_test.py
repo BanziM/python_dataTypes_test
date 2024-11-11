@@ -6,7 +6,11 @@ def add_to_list(numbers):
     Return:
     - The modified list.
     """
-    pass
+    numbers.append(6)
+    return numbers
+
+numbers = [1, 2, 3]
+add_to_list(numbers)
 
 
 def remove_from_list(numbers):
@@ -17,7 +21,12 @@ def remove_from_list(numbers):
     Return:
     - The modified list.
     """
-    pass
+    numbers.remove(3)
+    return numbers
+
+numbers = [1, 2, 3, 4]
+    
+remove_from_list(numbers)
 
 
 def insert_at_beginning(numbers):
@@ -28,7 +37,13 @@ def insert_at_beginning(numbers):
     Return:
     - The modified list.
     """
-    pass
+    numbers.append(0)
+    numbers.sort()
+    return numbers
+
+numbers = [1, 2, 3]
+
+insert_at_beginning(numbers)
 
 
 def reverse_list(numbers):
@@ -39,7 +54,9 @@ def reverse_list(numbers):
     Return:
     - The reversed list.
     """
-    pass
+    return numbers[::-1]
+numbers = [1, 2, 3]
+reverse_list(numbers)
 
 
 def create_new_tuple(t):
@@ -50,7 +67,11 @@ def create_new_tuple(t):
     Return:
     - The new tuple with the first two elements.
     """
-    pass
+    new_tup = t[:2]
+    return new_tup
+
+t = (5, 10, 15, 20)
+create_new_tuple(t)
 
 
 def check_if_value_exists(t, value):
@@ -61,8 +82,12 @@ def check_if_value_exists(t, value):
     Return:
     - True if the value exists, otherwise False.
     """
-    pass
-
+    for i in t:
+        if i == value:
+            return True
+t =(5, 10, 15, 20)
+value = 15
+check_if_value_exists(t, value)
 
 def find_intersection(set1, set2):
     """
@@ -72,7 +97,9 @@ def find_intersection(set1, set2):
     Return:
     - The intersection of the two sets.
     """
-    pass
+    d = set1 & set2
+    return d
+
 
 
 def find_union(set1, set2):
@@ -83,7 +110,9 @@ def find_union(set1, set2):
     Return:
     - The union of the two sets.
     """
-    pass
+    c = set1 | set2
+    return c
+
 
 
 def find_difference(set1, set2):
@@ -94,7 +123,10 @@ def find_difference(set1, set2):
     Return:
     - The difference between the two sets.
     """
-    pass
+    
+    b = set1 - set2
+    return b
+
 
 
 def add_student(student_grades):
@@ -105,7 +137,10 @@ def add_student(student_grades):
     Return:
     - The updated dictionary with the new student.
     """
-    pass
+#     student_grades = 
+#     return student_grades
+# student_grades = {}
+# print(add_student(student_grades))
 
 
 def change_bob_grade(student_grades):
@@ -116,8 +151,14 @@ def change_bob_grade(student_grades):
     Return:
     - The updated dictionary with Bob’s grade changed.
     """
-    pass
+    for k,v in student_grades.items():
+        if k == 'Bob':
+            v = 95
+            #print(k,v)
+            return student_grades
 
+student_grades = {'Alice': 85, 'Bob': 90, 'Charlie': 78}
+#print(change_bob_grade(student_grades))
 
 def delete_charlie(student_grades):
     """
@@ -127,8 +168,11 @@ def delete_charlie(student_grades):
     Return:
     - The updated dictionary with Charlie removed.
     """
-    pass
+    # student_grades.delete('Charlie')
+    # return student_grades
 
+student_grades = {'Alice': 85, 'Bob': 90, 'Charlie': 78}
+delete_charlie(student_grades)
 
 def retrieve_alice_grade(student_grades):
     """
@@ -138,4 +182,7 @@ def retrieve_alice_grade(student_grades):
     Return:
     - Alice's grade.
     """
-    pass
+    grade = student_grades['Alice']
+    return grade
+student_grades = {'Alice': 85, 'Bob': 90, 'Charlie': 78}
+print(retrieve_alice_grade(student_grades))

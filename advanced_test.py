@@ -6,7 +6,15 @@ def create_squares_of_evens():
     Return:
     - The list of squares of even numbers.
     """
-    pass
+    list = []
+    for i in range(1,21):
+        
+        if i % 2 == 0:
+            print(i)
+            list.append(i*i)
+
+    return list[:5]
+create_squares_of_evens()
 
 
 def convert_to_dict(students):
@@ -17,7 +25,14 @@ def convert_to_dict(students):
     Return:
     - The dictionary created from the list of students.
     """
-    pass
+#     dict = {}
+#     for i in students:
+#         for x in i:
+#             print(x)
+
+
+# students = [('x',10), ('y',9), ('z',8), ('m',10)]
+# convert_to_dict(students)
 
 
 def access_value_x(nested):
@@ -28,8 +43,11 @@ def access_value_x(nested):
     Return:
     - The value of 'x' (which is 10).
     """
-    pass
+    val =nested['c']['x']
+    return val
 
+nested = {'a': [1, 2, 3], 'b': (4, 5), 'c': {'x': 10, 'y': 20}}
+access_value_x(nested)
 
 def append_to_list_in_dict(nested):
     """
@@ -39,8 +57,10 @@ def append_to_list_in_dict(nested):
     Return:
     - The updated dictionary.
     """
-    pass
-
+    nested['a'].append(6)
+    return nested
+nested = {'a': [1, 2, 3], 'b': (4, 5), 'c': {'x': 10, 'y': 20}}
+append_to_list_in_dict(nested)
 
 def convert_tuple_to_list_and_append(nested):
     """
@@ -50,4 +70,6 @@ def convert_tuple_to_list_and_append(nested):
     Return:
     - The updated dictionary.
     """
-    pass
+    return nested['b']
+nested = {'a': [1, 2, 3], 'b': (4, 5), 'c': {'x': 10, 'y': 20}}
+print(convert_tuple_to_list_and_append(nested))
